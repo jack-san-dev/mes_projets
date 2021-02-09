@@ -1,0 +1,23 @@
+.cell {
+	width: 30px;
+	height: 35px;
+}
+
+.koopa {
+	width: 30px;
+	height: 35px;
+}
+
+.blanc {
+	width: 30px;
+	height: 35px;
+}
+
+.mario {
+	width: 30px;
+	height: 35px;
+}
+
+.line {
+	margin-bottom: -6px;
+}
