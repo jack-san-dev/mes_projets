@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mon projet canvas</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script type="text/javascript" src="jquery-3.2.1.js"></script>
+</head>
+<body>
+	<div id="sidebar-wrapper">
+		<ul id="sidebar_menu" class="sidebar-nav">
+			<li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
+			<li class="sidebar-brand"><input id="color" type="color"></li>
+			<li class="sidebar-brand">
+				<form id="largeurs_pinceau">
+					<input id="largeur_pinceau" type="range" min="2" max="50" value="5" />
+					<output id="output">5 pixels</output>
+				</form>
+			</li>
+			<li>
+				<form id="radio">
+					<div>
+						<input type="radio" name="option" value="drawing" checked>
+						<label for="genderChoice1">Pinceau</label>
+					</div>
+					<div>
+						<input type="radio" name="option" value="line">
+						<label for="genderChoice2">Line</label>
+					</div>
+					<div>
+						<input type="radio" name="option" value="square">
+						<label for="genderChoice3">Recangle</label>
+					</div>
+					<div>
+						<input type="radio" name="option" value="circle">
+						<label for="genderChoice4">Cercle</label>
+					</div>
+					<div>
+						<input type="radio" name="option" value="gomme">
+						<label for="genderChoice4">Gomme</label>
+					</div>
+				</form>
+			</li>
+<!-- 			<li><input type="button" id="save" value="Sauvergarder mon image" /></li>
+-->		</ul>
+</div>
+<div id="lol">
+	<canvas id="canvas" width="800" height="600"></canvas>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
