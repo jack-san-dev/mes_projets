@@ -1,0 +1,52 @@
+<p>forms works!</p>
+
+<form [formGroup]="questions">
+    <div formGroupName="question_1">
+        <label>Quel célèbre dictateur dirigea l’URSS du milieu des années 1920 à 1953 ?</label><br>
+        <input type="radio" formControlName="awnser" value="1"> <span [ngStyle]="{'background-color': color}">Staline</span>
+        <input type="radio" formControlName="awnser" value="2"> Trotski
+        <input type="radio" formControlName="awnser" value="3"> Lénine
+        <input type="radio" formControlName="awnser" value="0"> Molotov
+    </div>
+    <div formGroupName="question_2">
+        <label>Dans quel pays peut-on trouver la Catalogne, l’Andalousie et la Castille ?</label><br>
+        <input type="radio" formControlName="awnser" value="2" > L'Italie
+        <input type="radio" formControlName="awnser" value="3"> La France
+        <input type="radio" formControlName="awnser" value="1"> <span [ngStyle]="{'background-color': color}">L'Espagne</span>
+        <input type="radio" formControlName="awnser" value="0"> Le Portugal
+    </div>
+    <div formGroupName="question_3">
+        <label>Qui a dit : « Le sort en est jeté » (Alea jacta est) ?</label><br>
+        <input type="radio" formControlName="awnser" value="2" > Auguste
+        <input type="radio" formControlName="awnser" value="3"> Vercingétorix
+        <input type="radio" formControlName="awnser" value="1"> <span [ngStyle]="{'background-color': color}">César</span>
+        <input type="radio" formControlName="awnser" value="0"> Attila
+    </div>
+    <div formGroupName="question_4">
+        <label>À qui doit-on la chanson « I Shot the Sheriff » ?</label><br>
+        <input type="radio" formControlName="awnser" value="2" > UB40
+        <input type="radio" formControlName="awnser" value="3"> Eric Clapton
+        <input type="radio" formControlName="awnser" value="0"> Jim Morrison
+        <input type="radio" formControlName="awnser" value="1"> <span [ngStyle]="{'background-color': color}"> Bob Marley </span> 
+        </div>
+    <div formGroupName="question_5">
+        <label>Quel pays a remporté la coupe du monde de football en 2014 ?</label><br>
+        <input type="radio" formControlName="awnser" value="2" > Le Brésil
+        <input type="radio" formControlName="awnser" value="1"><span [ngStyle]="{'background-color': color}"> L'Allemagne </span>
+        <input type="radio" formControlName="awnser" value="3"> L'Italie
+        <input type="radio" formControlName="awnser" value="0"> L'Argentine
+    </div>
+    <div formGroupName="question_6">
+        <label>Dans quelle ville italienne l’action de la pièce de Shakespeare « Roméo et Juliette » se situe-t-elle ?</label><br>
+        <input type="radio" formControlName="awnser" value="2"> Milan
+        <input type="radio" formControlName="awnser" value="3"> Venise
+        <input type="radio" formControlName="awnser" value="1"><span [ngStyle]="{'background-color': color}"> Vérone </span>
+        <input type="radio" formControlName="awnser" value="0"> Rome
+    </div>
+</form><br>
+
+<button (click)="updateAwnsers(questions.value)" [hidden]="is_check ? true : false">Envoyer</button>
+<div *ngIf="display">
+    <p style="color : blue">Ton score : {{ score }}/6</p>
+    <button (click)="restart()">Réessayer</button>
+</div>
